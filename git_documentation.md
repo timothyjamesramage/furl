@@ -1,0 +1,904 @@
+# Git Documentation
+
+## Commit Messages
+
+| Commit Message | Number of Commits |
+| --- | --- |
+| Grammar. | 20 |
+| Comments. | 18 |
+| Code look and feel. | 14 |
+| Tweak changelog entry. | 3 |
+| Update changelog. | 2 |
+| Merge. | 2 |
+| Remove unused import. | 2 |
+| Line wrap to 70 chars. | 2 |
+| Drop support for Python 3.2. | 2 |
+| Add support for protocol relative URLs. | 2 |
+| Look and feel. | 2 |
+| Deprecate furl.pathstr, furl.querystr, and furl.fragmentstr. There should be one, and preferably only one, obvious way to serialize URL component objects to strings. | 2 |
+| join() anything that serializes to a string, like another furl object. | 2 |
+| API doc tweaks. | 2 |
+| Version 0.3. Query parameters are now an omdict, an ordered multivalue dictionary, and path, query, and fragment encoding was overhauled. | 2 |
+| Installation with pip. | 2 |
+| Grammar tweaks and fixes. | 2 |
+| Initial commit. | 2 |
+| Merge pull request #158 from timgates42/bugfix_typos
+
+docs: Fix a few typos | 1 |
+| docs: Fix a few typos
+
+There are small typos in:
+- README.md
+
+Fixes:
+- Should read `interpreted` rather than `interpretted`.
+- Should read `characters` rather than `charactes`.
+
+Signed-off-by: Tim Gates <tim.gates@iress.com> | 1 |
+| link directly to the issue comment | 1 |
+| adopt the readme contents as the package long_description for pypi | 1 |
+| remove duplicate metadata test | 1 |
+| avoid explicit imports when importing __version__ variables | 1 |
+| change documentation links from python 3.8 to python 3.x | 1 |
+| Merge pull request #152 from jgarte/jgarte-patch-1
+
+Update python urllib links | 1 |
+| Update python urllib links | 1 |
+| furl v2.1.3 | 1 |
+| tweak comment | 1 |
+| update changelog for forthcoming v2.1.3 | 1 |
+| drop ';' as a query delimiter | 1 |
+| add comment to test in parallel with tox | 1 |
+| spacing | 1 |
+| declare furl compatible with py3.8 and py3.9 in setup.py | 1 |
+| furl v2.1.2 | 1 |
+| code look and feel | 1 |
+| drop support for EOL Python 3.4 and Python 3.5 | 1 |
+| update changelog for forthcoming v2.1.2 | 1 |
+| drop EOL Python 3.4 and 3.5, add 3.8 and 3.9 to testing | 1 |
+| Apply @mcepl's tests_overcome_bpo42967.patch | 1 |
+| urllib changed behavior in Py 3.9 | 1 |
+| change v2.1.1 to released | 1 |
+| furl v2.1.1 | 1 |
+| remove copyright year | 1 |
+| remove pep8 whitespace | 1 |
+| fix grammar | 1 |
+| add origin as a parameter to furl.remove(). allow furl.origin to be assigned None | 1 |
+| homogenize parameter order across furl.add(), furl.set(), and furl.remove | 1 |
+| add scheme, host, and netloc as parameters to furl.remove() | 1 |
+| note that v2.1.1 is unreleased | 1 |
+| test python 3.8 and 3.9 | 1 |
+| switch variable names from l to lst to appease flake8 | 1 |
+| remove dangling reference to the now-deleted API.md | 1 |
+| move API.md into the readme | 1 |
+| DRY | 1 |
+| remove old, deprecated sudo keys | 1 |
+| test availability of metadata, furl.__title__, furl.__version__, etc | 1 |
+| Merge pull request #126 from timgates42/bugfix/typo_misspelled
+
+Fix simple typo: mispelled -> misspelled | 1 |
+| PEP8. | 1 |
+| Merge pull request #130 from mattmurch/master
+
+Fix: don't modify the original Path instance with __truediv__(). | 1 |
+| Fix original Path instance modification from __truediv__
+
+Path class's __truediv__ should make a true copy, and not
+modify the original instance of Path. Creating a new instance
+with `path=self.segments` sets the new instance's path as a
+pointer to the old instance's segments.
+
+Also, add test assertion that the original instance is not
+modified with __truediv__ when isabsolute is True.
+
+Resolves: #127 | 1 |
+| Fix simple typo: mispelled -> misspelled
+
+Closes #125 | 1 |
+| Remove table of contents header. | 1 |
+| Add table of contents to the API docs. | 1 |
+| Tweak readme code aesthetics. | 1 |
+| Add default ports for various schemes. | 1 |
+| Refactor string check. | 1 |
+| Export metadata variables properly (furl.__title__, furl.__version__, etc). | 1 |
+| Fix header logo height. | 1 |
+| Increase header logo size slightly. | 1 |
+| Add copyright metadata. | 1 |
+| Furl v2.1.0. | 1 |
+| Update orderedmultidict to v1.0.1 to resolve 'DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working'. | 1 |
+| Add an __idiv()__ path manipulation example to the README. | 1 |
+| Append slash to paths to intimate a directory, test -> test/. | 1 |
+| Documentation look and feel. | 1 |
+| Add trailing comma for consistent code style. | 1 |
+| Properly capitalize Unicode. | 1 |
+| Add more tests and a changelog entry for the new query_dont_quote= and dont_quote= parameters. | 1 |
+| Expound upon the comment of the dont_quote= parameter of Query.encode(). | 1 |
+| Fix comment example. | 1 |
+| Minor refactor for clarity. | 1 |
+| Support unicode usernames and passwords in Python 2. | 1 |
+| Use string formatting over the more opaque str.join(). | 1 |
+| Consistent code look and feel. | 1 |
+| Move package info from __init__.py into the more standard __version__.py. | 1 |
+| Always encode '&' is queries, even with quote_dont_quote=True. This, in turn, allows URLs as query parameters. | 1 |
+| Add exaple of the dont_quote= paramter. | 1 |
+| Remove empty line to homogenize comment examples. | 1 |
+| Use urllib.parse.quote() instead of both urllib.parse.quote() and urllib.parse.quote_plus() internally to avoid their implicit, different safe= character sets. | 1 |
+| Add Python 3.7 workaround for Travis. See https://github.com/travis-ci/travis-ci/issues/9815. | 1 |
+| Correct python console example typo. | 1 |
+| Note the addition of dont_quote and query_dont_quote in the changelog. | 1 |
+| Add documentation and examples of dont_quote to Query.encode() and query_dont_quote to furl.tostr(). | 1 |
+| Add RFC 3986 grammar comment to SAFE_SEGMENT_CHARS. | 1 |
+| Add dont_quote parameter to Query.encode() and query_dont_quote to furl.tostr() that avoids encoding valid query characters, either in their entirety (dont_quote=True) or selectively (e.g. dont_quote='/?'). | 1 |
+| Encode '/' consistently in query strings across both quote_plus=True and quote_plus=False. | 1 |
+| Furl v2.0.0. | 1 |
+| Codestyle fix. | 1 |
+| Add ll URL components (scheme, host, port, path, fragment, etc) to furl's constructor. | 1 |
+| Remove implicit text elements in anchors to avoid unintentional underscores on rollover. | 1 |
+| Replace isinstance() calls with hasattr() duck testing for extensibility's sake. | 1 |
+| Update changelog to reflect the new Pathlib-like Path.__truediv__ and furl.__truediv__ behavior. | 1 |
+| Update API docs to the new Pathlib-like Path.__truediv__ and furl.__truediv__ behavior. | 1 |
+| Accept Path instances for Path.load(). E.g. f.path.load(Path('hi')). | 1 |
+| Add oxford comma. | 1 |
+| Remove path.copy(), until explicitly requested, to keep the interface as clean and simple as possible. | 1 |
+| Code look and feel. Comments. | 1 |
+| Merge pull request #108 from ksonj/master
+
+Make __truediv__ return new instance. | 1 |
+| Fix style | 1 |
+| Fix docstring on Path.add | 1 |
+| Fix joining of paths
+
+This fixes the joining of path instances or `furl`s with `Path`s
+(instead of strings or lists of strings)
+
+>>> furl.furl("http://example.com") / furl.Path("example") | 1 |
+| Make __truediv__ return new instance | 1 |
+| Line wrap header. | 1 |
+| Set an explicit API logo height to prevent a flash of unstyled content (FOUC). | 1 |
+| Link to api.svg in the repo. | 1 |
+| Publish both a source distribution and a Wheel to PyPi. | 1 |
+| Explicitly include tests/ in the source distribution. This shouldn't be required, as per https://docs.python.org/2/distutils/sourcedist.html#specifying-the-files-to-distribute, but v1.2.1's sdist release strangely and uniquely didn't include tests/. | 1 |
+| Add the default ports for more common protocols, as suggested by the common protocols included in urllib/parse.py. | 1 |
+| Ignore lambda expression usage in IceCream import fallback. | 1 |
+| Remove support for Python 2.6, which reached EOL on 2013-10-29. | 1 |
+| Furl v1.2.1. | 1 |
+| Set an explicit logo height to prevent flash of unstyled content (FOUC). | 1 |
+| Add IceCream import with graceful fallback. | 1 |
+| Join URLs without an authority (e.g. 'foo:blah') consistently with urllib.parse.urljoin(). Big thanks to Ben Wilber for reporting. | 1 |
+| Switch to relative path for readme logo. | 1 |
+| Tweak furl.asdict() readme example. | 1 |
+| Simplify setup.py's long description. | 1 |
+| Remove old, supererogatory comment. | 1 |
+| Test against Python 3.7. Note Python 3.7 support. | 1 |
+| Refactor setup.py's VERSION extraction. | 1 |
+| Homogenize whitespace before return statements. | 1 |
+| Tiny code refactor. | 1 |
+| Furl v1.2. | 1 |
+| Tweak changelog text. | 1 |
+| Add comment clarifying where the Path's list of SAFE_SEGMENT_CHARS comes from. | 1 |
+| Conform to flake8. | 1 |
+| Fix documentation example. | 1 |
+| Switch from 'divison operator' to 'slash operator' used by Python's official docs. Update pathlib.Path links. | 1 |
+| Rename non_text_iterable() to the more apposite non_string_iterable(). | 1 |
+| Remove duplicate implementation of callable_attr(). | 1 |
+| Check code style with flake8 instead of pycodestyle. | 1 |
+| Support appending path segments to both furl objects and Path objects via the division operator (__truediv__()). | 1 |
+| Percent-encode all non-unreserved characters in Query key=value pairs, including valid query characters (e.g. '=', '?', etc). Old behavior: "?url=http://foo.com/". New behavior: "?url=http%3A%2F%2Ffoo.com%2F". | 1 |
+| Bump orderedmultidict dependency to v1.0. | 1 |
+| Rename quote_func to the more standard quote_fn. | 1 |
+| Furl v1.1. | 1 |
+| Remove superfluous comment. | 1 |
+| Changed -> Fixed. | 1 |
+| Preserve query strings as-is. Only encode equal signs in query values if the key is non-empty. | 1 |
+| Furl v1.0.2. | 1 |
+| Support all schemes without a netloc/authority without an explicit whitelist of such. Add strip_scheme() function and expose get_scheme() and set_scheme() publicly. | 1 |
+| Drop support for Python 3.3. Python 3.3 reached EOL on 2017-09-29, and in turn both wheels and setuptools dropped support for it. As a result, Python 3.3 is no longer testable on https://travis-ci.org/. See https://travis-ci.org/gruns/furl/jobs/380056956: "wheel requires Python '>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*' but the running Python is 3.3.6". | 1 |
+| Test QueryCompositionInterface's .args setter in addition to its .query setter. | 1 |
+| Update changelog to reflect https://github.com/gruns/furl/commit/6636d2279ae4177afdb1eeff9c69766bd7b38970. | 1 |
+| Restore furl.url's setter method. E.g. furl.url = 'http://www.foo.com/' works again. | 1 |
+| Add 'acct' to COLON_SEPARATED_SCHEMES. | 1 |
+| Fix comment grammar. | 1 |
+| Rename <fd> to the more appropriate <fo> for a file object. | 1 |
+| Inline long_description. | 1 |
+| Correct in setup.py's classifiers that furl is licensed in the public domain. | 1 |
+| Clarify furl.encode() documentation in API.me. | 1 |
+| Backtick escape documentation character. | 1 |
+| API.md Grammar. | 1 |
+| Adjust example whitespace. | 1 |
+| Refactor common code into common.py. | 1 |
+| Another minor refactor for clarity. | 1 |
+| Minor refactor. | 1 |
+| Line wrap comments to 72 characters. | 1 |
+| Clarify that the <path> and <query> parameters of furl.remove() accept both lists and the boolean True. | 1 |
+| Properly test the presence of items() and iteritems() methods. | 1 |
+| Order if/else cascade in URL component order. | 1 |
+| Replace 'domain' with the more apt 'host' in comment. | 1 |
+| Name. | 1 |
+| Rename 'domain' variables and functions to the more apt word 'host'. is_valid_domain() to is_valid_host(), etc. | 1 |
+| Showcase asdict() in the readme. | 1 |
+| Fix documentation typo. | 1 |
+| Correct horizontal rules to 80 characters width. | 1 |
+| Furl v1.0.1. | 1 |
+| Correct horizontal rules to 80 characters wider. | 1 |
+| Ordering look and feel. | 1 |
+| Add dictionary representations of Path, Query, Fragment, and furl objects via an asdict() method. | 1 |
+| Clarify variable name. | 1 |
+| Merge branch 'master' of github.com:gruns/furl | 1 |
+| Add source text SVG images. | 1 |
+| Use the print() function (ala Python3) over the print statement in API examples. | 1 |
+| API documentation grammar and clarifications. | 1 |
+| Increase logo sizes slightly. | 1 |
+| Change from HTML <br/> linebreaks to CommonMark \\ backslash linebreaks. | 1 |
+| Note that furl also supports PyPy3. | 1 |
+| Merge pull request #86 from medecau/fix-tests
+
+Test pypy3 (Python 3 under PyPy). Remove an unnecessary six dependency from tox. Huge thanks to Pedro Rodrigues. | 1 |
+| unmangles environment names | 1 |
+| removes use of mutable objects as default values
+moves “quacks” function out of the object as it does not need access to the object itself | 1 |
+| clearing reused var | 1 |
+| unused code | 1 |
+| adds support for pypy3
+uses permutation to generate list of environments in tox config | 1 |
+| Removes six dependency definition in tox config file exposing the install process to its requirement. | 1 |
+| Add PyPy to the Python interpreters furl supports in the README. | 1 |
+| Wrap the Python version badge with a link to furl's PyPi page. | 1 |
+| Add license and Python version badges. | 1 |
+| Add the generic Python language designation to setup.py. | 1 |
+| Add the CPython implementation to setup.py. | 1 |
+| Furl v1.0.0. | 1 |
+| Comment header look and feel. | 1 |
+| Test furl against Python 3.6 in Travis. | 1 |
+| Add Python 3.6 as a test target. | 1 |
+| Expound furl's URL parsing capabilities, too. | 1 |
+| Switch to API header image. | 1 |
+| Tweak logo whitespace. | 1 |
+| Add API header image. | 1 |
+| Add default ports for telnet and TFTP. | 1 |
+| Equalize whitespace above and below the logo. | 1 |
+| Restore horizontal rule below logo. Enlarge logo slightly. | 1 |
+| Add horizontal rule below logo. | 1 |
+| Resize logo. | 1 |
+| Link the logo's specific commit with cdn.rawgit.com. See https://github.com/rgrove/rawgit/blob/master/FAQ.md#how-long-does-the-cdn-cache-files-how-can-i-make-it-refresh-my-file. | 1 |
+| Add logo to readme. | 1 |
+| Readme tweaks. | 1 |
+| Correctly center title text. | 1 |
+| Center readme header. | 1 |
+| Switch to shields.io badges. | 1 |
+| Link to urllib and urlparse. | 1 |
+| Don't use bare excepts. Appease pycodestyle/PEP8. | 1 |
+| Furl v0.5.7. | 1 |
+| Add six >= v1.8.0 dependency to test requirements. | 1 |
+| Refactor commonly used six.moves.urllib.parse imports. | 1 |
+| Only percent-decode percent-encoded path strings once, not twice. Fixes Issues #55 and #84. Huge thanks to Thomas Hooper and Tom Dryer. | 1 |
+| Remove incorrect attribute comment. | 1 |
+| PEP8 conformity with pycodestyle v2.8.1. | 1 |
+| Run 'setup.py test' and 'setup.py publish' through setuptools.setup()'s cmdclass parameter. By default, 'setup.py test' requires test/__init__.py to exist, which isn't discorouged. | 1 |
+| Ignore .eggs/, the directory containing eggs downloaded by setuptools to build, test, and run plug-ins. | 1 |
+| Furl v0.5.6. | 1 |
+| Bump orderedmultidict dependency from v0.7.7 to v0.7.8. | 1 |
+| Furl v0.5.5. | 1 |
+| Bump orderedmultidict dependency from v0.7.6 to v0.7.7. | 1 |
+| Correct 'PyPi' to 'PyPI'. | 1 |
+| Whitespace. | 1 |
+| Change setup.py's topic from Internet to the more apt Software Development->Libraries. | 1 |
+| Furl v0.5.4. | 1 |
+| Treat None as the empty string when provided to constructors and load()s, not the string 'None'. | 1 |
+| Disable Travis email notifications. | 1 |
+| Furl v0.5.3. | 1 |
+| In Python 2, to be consistent with the other string URL components, change furl.netloc's and furl.origin's return value to a regular string, not a Unicode string. No change to Python 3. | 1 |
+| Resize sub-headers. | 1 |
+| Fix typo. | 1 |
+| Furl v0.5.2. | 1 |
+| Add changelog. | 1 |
+| Reference RFC 3986 for a valid scheme's format. | 1 |
+| Correct typo: 'TOX_ENV' -> 'TOXENV'. Test codestyle with every Python version. | 1 |
+| Test every version of Python with Travis. | 1 |
+| Refactor travis config. Test Python 3.5 (see https://github.com/travis-ci/travis-ci/issues/4794). | 1 |
+| Test Python 3.5 with Travis. | 1 |
+| Wrap line for PEP8. | 1 |
+| Merge branch 'test-codestyle' of https://github.com/medecau/furl into medecau-test-codestyle | 1 |
+| Add pycodestyle to the test dependencies. | 1 |
+| fix multiple spaces after ',' code style error | 1 |
+| adds codestyle tox environment to travis config | 1 |
+| Use 'self' as the instance variable name. | 1 |
+| Add is_valid_scheme(). Verify valid schemes before adoption. Close #79. Big thanks to Brightcells. | 1 |
+| Correct sentence. | 1 |
+| Rename beforeColon to the PEP-8 compliant before_colon. | 1 |
+| Remove unnecessary type tests. | 1 |
+| PEP 8 cleanup. | 1 |
+| Wrap long lines with parens over backslashes. See https://www.python.org/dev/peps/pep-0008/#id19: The preferred way of wrapping long lines is by using Python's implied line continuation inside parentheses, brackets and braces. Long lines can be broken over multiple lines by wrapping expressions in parentheses. These should be used in preference to using a backslash for line continuation. | 1 |
+| Store compiled regex objects statically as function members. | 1 |
+| refactors function definitions to partials | 1 |
+| asserts that results are bool type | 1 |
+| removing previous change to travis config
+for some reason travis does not recognise py35 | 1 |
+| fixing code style errors | 1 |
+| test codestyle conformance | 1 |
+| Test origin with initial, empty URL. | 1 |
+| Add origin support. Wrap furl.set() to guard against side effects from all exceptions. | 1 |
+| Use the more explicit 'web browser'. | 1 |
+| Move utility methods to the top of furl.py. | 1 |
+| Furl v0.5.1. | 1 |
+| Add Unicode example. | 1 |
+| Publish to PyPi with twine. 'setup.py sdist upload' is deprecated. | 1 |
+| Furl v0.5. | 1 |
+| IDNA encode Unicode hostnames. Add Unicode fragment tests. Huge thanks to Jacob Magnusson. | 1 |
+| Fix a Unicode path encode bug. Close #72. Big thanks to Lawrence Luo. | 1 |
+| Furl v0.4.95. Bump due to PyPi 500 Internal Server Error. | 1 |
+| Furl v0.4.94. | 1 |
+| Homogenize ValueError messages. | 1 |
+| Raise ValueError on blatantly invalid host strings (e.g. '.', '..', 'fake@user:not:real:port', etc). Huge thanks to Vincent Driessen. | 1 |
+| Make hosts and netlocs always lowercase. Huge thank you to Vincent Driessen. | 1 |
+| PEP8 tweaks. Thanks to Nishant Nawarkhede. | 1 |
+| Furl v0.4.93. | 1 |
+| Nudge orderedmultidict dependency to v0.7.6. | 1 |
+| Include the license and documentation in the source distribution. Thanks to Igor Gnatenko. | 1 |
+| Add support for furl.join() to join multiple URLs, like os.path.join(). Big thanks to Manuel Kaufmann. | 1 |
+| Percent encode forward slashes ('/') in usernames and passwords. Big thanks to Jonathan Stoppani. | 1 |
+| Furl v0.4.92. | 1 |
+| Fix a bug where the port sometimes wasn't inferred from known schemes. Thanks to Matt Dainty. | 1 |
+| Remove dated deprecation notes. | 1 |
+| Test against Python 3.5, too. | 1 |
+| Furl v0.4.91. | 1 |
+| In Python 2, make furl.tostr() always return a string, not unicode. | 1 |
+| Accepting joining with Unicode strings in furl.join(). | 1 |
+| Remove unused class attribute. | 1 |
+| Furl v0.4.9. | 1 |
+| Use the Python console's '...' for blocks. | 1 |
+| Align newline. | 1 |
+| Add a fancier example. | 1 |
+| Homogenize markdown code wraps. | 1 |
+| Tweak API document. | 1 |
+| Percent-encode usernames and passwords. Fix #56. | 1 |
+| Add UTF-8 encoding and header comments where needed. | 1 |
+| Furl v0.4.8. | 1 |
+| Add tostr(), a method that returns a URL string and exposes encoding parameters. | 1 |
+| Remove redundant test that breaks Python 2.6 tests. | 1 |
+| Add quote_plus to Query.encode() and allow key=value query pairs to be optionally encoded with plain percent-encoding. Big thanks to Sidharth Shanker. | 1 |
+| Tweak API grammar and examples. | 1 |
+| Furl v0.4.7. | 1 |
+| Rename full_url_utf8_encoded_str to the shorter full_url_utf8_str. | 1 |
+| Remove redundant unicode test. | 1 |
+| Merge pull request #52 from suligap/furl-takes-unicode
+
+Fix failing furl(unicode_object) on python 2. | 1 |
+| Regression test for #52.
+
+@gruns, this should clear things up regarding
+https://github.com/gruns/furl/pull/52#issuecomment-100414494 | 1 |
+| Fix failing furl(unicode_object) on python 2. | 1 |
+| Reference the furl version instead of calendar dates. | 1 |
+| Furl v0.4.6. | 1 |
+| Add tests to ensure encode() accepts both 'delimiter' and the incorrect, backwards compatible 'delimeter'. | 1 |
+| Use the _absent over None for parameter default. Comments. Big thanks to Wouter Bolsterlee. | 1 |
+| Spell 'delimiter' correctly, both in API and documentation
+
+...but don't break existing code by adding a small compatibility check
+for existing code using a keyword arg with the wrong spelling. | 1 |
+| Merge pull request #49 from wbolster/patch-1
+
+Fix typo in 'delimiter' | 1 |
+| Fix typo in 'delimiter' | 1 |
+| Tweak one sentence description. | 1 |
+| Furl v0.4.5 | 1 |
+| Require orderedmultidict v0.7.5 or later. v0.7.5 rquires six >= 1.8.0, like furl itself. | 1 |
+| Explicitly mention that furl supports both Python 2 and 3. | 1 |
+| Furl v0.4.4. | 1 |
+| Remove unittest2 as an implicit requirement for Python 2.6. | 1 |
+| PEP8 comments. | 1 |
+| Furl v0.4.3. | 1 |
+| Import urllib quote* and unquote* functions directly. Wrap overflowed lines. | 1 |
+| Use a simpler Python version check. Thanks to Ned Batchelder. | 1 |
+| Fix a Unicode regression in Python 2. (#46) | 1 |
+| Furl 0.4.2. | 1 |
+| Swap order of PyPi and Travis CI badges. | 1 |
+| Merge pull request #44 from msabramo/patch-5
+
+README.md: Add PyPI version badge | 1 |
+| SVG image;'link | 1 |
+| README.md: Add PyPI version badge | 1 |
+| Reposition build badge. | 1 |
+| Add Travis CI build badge. | 1 |
+| Merge pull request #40 from msabramo/patch-2
+
+.travis.yml: Test with multiple Python versions | 1 |
+| Merge pull request #39 from msabramo/patch-1
+
+tox.ini: Make more DRY | 1 |
+| Merge pull request #42 from msabramo/patch-3
+
+setup.py: Don't pin exact version of six | 1 |
+| Migrate from pycon mode to python mode. The former was removed by GitHub. | 1 |
+| Merge pull request #43 from msabramo/patch-4
+
+README.md: pycon => python | 1 |
+| .travis.yml: Put back travis_retry for pip install | 1 |
+| .travis.yml: Test with multiple Python versions
+
+Using tox | 1 |
+| README.md: pycon => python
+
+To get syntax highlighting of python examples | 1 |
+| setup.py: Don't pin exact version of six
+
+Since furl is a library, having furl pin exact versions of dependencies means you are limiting the usability of furl when you pin an exact version of `six`. Six months down the road, someone may have an app and want to use `six>=1.9.0` or even `six==1.8.2` (Or a library the app uses may require this) and then they'll be stuck. Best to keep dependencies as loose as possible. If furl works with `six==1.6.0` for example then change it to require `six>=1.6` and more people will be able to use furl. | 1 |
+| tox.ini: Make more DRY | 1 |
+| furl v0.4.1. | 1 |
+| Gracefully handle equality tests between furl objects and non-furl-like objects. | 1 |
+| Furl v0.4.0. | 1 |
+| Require orderedmultidict v0.7.4 or greater. | 1 |
+| Merge branch 'jmcarp-master' | 1 |
+| Support Python 3 (#35). Huge thank you to Joshua Carp (jmcarp) and Vincent Driessen (nvie). | 1 |
+| Merge branch 'master' of https://github.com/jmcarp/furl into jmcarp-master | 1 |
+| Remove whitespace. | 1 |
+| Add support for Python 3. | 1 |
+| Use consistent delimeter indentation. | 1 |
+| Merge pull request #34 from TkTech/patch-1
+
+Update furl.py | 1 |
+| Update __init__.py
+
+Bugfix version bump. | 1 |
+| Update furl.py
+
+Adds the tel and sms (a subset of tel) schemes to the explicit list of colon separated schemes in furl.py.
+
+Both of these schemes are ever more frequently encountered on modern sites. | 1 |
+| Furl v0.3.94. | 1 |
+| Update orderedmultidict dependency to 0.7.3 and newer. | 1 |
+| Furl v0.3.93. | 1 |
+| Upgrade orderedmultidict dependency to v0.7.2. | 1 |
+| Furl v0.3.92. | 1 |
+| Remove tests/__init__.py. Test directories shouldn't be treated as (sub)packages. | 1 |
+| Increment version to v0.3.91 for PyPi. | 1 |
+| Add equality rich comparison methods to Path, Query, and Fragment. | 1 |
+| Use hardcoded correct values. | 1 |
+| Furl v0.3.9. | 1 |
+| Fix #33: accept unicode query strings. | 1 |
+| Furl v0.3.8. | 1 |
+| Glean setup.py's version number from furl/__init__.py. | 1 |
+| Support unicode path segments. | 1 |
+| Support unicode query keys and values. | 1 |
+| PEP8 cleanup, remove unused variables and imports. Thanks to slick666. | 1 |
+| Prevent GitHub from coercing the text example a link. | 1 |
+| Furl v0.3.7. | 1 |
+| Support the removal of multiple values with Query.remove(). | 1 |
+| Minor refactoring. | 1 |
+| Support the mailto: scheme, whose separator is ':' instead of '://'. | 1 |
+| Refactor loop. | 1 |
+| Support URL creation from unicode strings. Thanks to Leonid Shvechikov. | 1 |
+| Furl 0.3.6. | 1 |
+| Remove prints. | 1 |
+| Support empty query parameters without trailing '='s. Thanks to ulope. | 1 |
+| Resolve pep8 incongruities. | 1 |
+| Remove redundant warnings comments, add missing warnings comments. | 1 |
+| Fix typo bug. Thanks to slick666. | 1 |
+| Organization. | 1 |
+| Add a normalize() method to Path objects. | 1 |
+| Add .gitignore. | 1 |
+| Test with nose, not pytest. Indicate that unittest2 is required for testing Python 2.6. | 1 |
+| Merge branch 'master' of https://github.com/gruns/furl | 1 |
+| Format code to PEP8, #18. Fixed tests in Python 2.6 and added unittest2 as a test requirement for Python <= 2.6. Fixed a bug in Path.add() where in some cases the absoluteness of the Path wasn't preserved. | 1 |
+| test it publicly | 1 |
+| testing with tox to provide visibility to test failure in different python versions | 1 |
+| More pep8 cleanup
+
+Some hands on cleaning. Mostly refactoring comments and string constants | 1 |
+| Auto PEP8
+
+Ran autopep8 against codebase. Not tested.
+https://pypi.python.org/pypi/autopep8 | 1 |
+| Fix comment header. | 1 |
+| Update development status. | 1 |
+| Markdown grammar and flow. | 1 |
+| Example tweaks for consistency. | 1 |
+| Grammar and docs tweaks. | 1 |
+| Grammar and sentence flow. | 1 |
+| Grammar fix. | 1 |
+| Grammar fix in Path.isabsolute AttributeError exception message. | 1 |
+| Clean up furl.__str__. | 1 |
+| Don't erroneously strip '//' from the beginning of the path in furl.__str__ if the netloc is ''. | 1 |
+| Update the API reference with Path.isabsolute's new behavior. | 1 |
+| Update Path.isabsolute AttributeError exception message. | 1 |
+| Update isabsolute AttributeError message. | 1 |
+| The URL Path isabsolute attribute is now only read-only for URLs with a netloc (a username, password, host, and/or port). Fix issue #16. Thanks to Markbnj. | 1 |
+| Formatting, look and feel. | 1 |
+| Moved the note about future deprecation of f.pathstr, f.querystr, and f.fragmentstr to a newly created 'Future' section. | 1 |
+| furl version 0.3.4. | 1 |
+| Changed the default value of scheme, username, password, host, and netloc to None. URLs are now formatted as expected when scheme, username, password, host, and/or netloc are set to '' - that component is included in the URL as an empty string. | 1 |
+| Note the impending deprecation of f.pathstr, f.querystr, and f.fragmentstr from the next version of furl (v0.3.5). Remove documentation references to f.pathstr, f.querystr, and f.fragmentstr. | 1 |
+| Added __init__.py to tests/ so tests can be run via setup.py with 'python setup.py test'. | 1 |
+| Comments, look and feel. | 1 |
+| Changed embedded code syntax highlighting from python mode to python console mode. | 1 |
+| Comment clarification. | 1 |
+| Version 0.3.3 | 1 |
+| furl URLs without a scheme should not be prefixed with '//', as-is the default behavior of urlparse.urlunsplit(). | 1 |
+| Fixed bug #14 - furl.remove() removed port, username, and password even if they weren't specifed to be removed. Added equality operator to furl. | 1 |
+| Furl 0.3.2 - Removed encoding ambiguity for '+'s in Queries. Spaces encode to '+'s. '+'s are URL encoded to '%2B's. | 1 |
+| Don't add a scheme to the input url of urlsplit(url) if one wasn't provided originally. | 1 |
+| Version 0.3.1 for PyPi. | 1 |
+| Added copy() and join() methods to furl. | 1 |
+| Furl objects can be initialized with other furl objects. | 1 |
+| Fix grammar goofs and sentence flow. | 1 |
+| Minor PyPi description tweaks. | 1 |
+| Comment fixes and tweaks. | 1 |
+| API docs tweaks. | 1 |
+| Import os for publishing to PyPi. | 1 |
+| Version 0.3 for PyPi with fixed setup.py. | 1 |
+| Fixed PyPi package info relative imports. | 1 |
+| Replaced some isinstance() calls. | 1 |
+| Removed copyright headers. | 1 |
+| Revert URL components in markdown. | 1 |
+| Test bolden URL components in markdown #3. | 1 |
+| Test bolden URL components #2. | 1 |
+| Test boldened URL components. | 1 |
+| Add support for usernames and passwords in URLs. | 1 |
+| Version 0.2.1 for PyPI and Python 2.6. | 1 |
+| Indicate that furl is now Python 2.6 compatible in setup.py. | 1 |
+| Removed dictionary comprehensions for compatibility with Python 2.6 and earlier. | 1 |
+| Actually, no horizontal rules looks better. | 1 |
+| Added horizontal rules. | 1 |
+| PyPI metadata. | 1 |
+| 'Unlicense' for brevity. | 1 |
+| Consistent version 0.2. | 1 |
+| furl.py and __init__.py moved to furl/ for PyPI. | 1 |
+| furl.py moved into furl/. | 1 |
+| setup.py for PyPI. | 1 |
+| Unlicensed. | 1 |
+| Minus 'parsing' for brevity and impact. | 1 |
+| Github header formatting fix. | 1 |
+| 'Unlicense' is the proper name. | 1 |
+| Added Unlicense clause. | 1 |
+| For the sake of clarification, Furl is available under the Unlicense (http://unlicense.org/). | 1 |
+| Removed the unnecessary 'args=' parameter declaration. 'args' is the first parameter of furl.add(), furl.set(), and furl.remove(). | 1 |
+| Comment typo fixed. | 1 |
+| Small furl.add() fragment example fix. | 1 |
+| The entire URL path can be removed with path=True for furl.remove(). | 1 |
+| import for clarification | 1 |
+| Anchor fix. | 1 |
+| Minor if/else logic tweaks. | 1 |
+| Minor if/else logic tweaks and comment updates. | 1 |
+| Some editorial cleaning. | 1 |
+| Added another query arguments example. | 1 |
+| Various formatting fixes. | 1 |
+| License to build. | 1 |
+| Removing four spaced code blocks, replacing with backticks. | 1 |
+| Github didn't like four spaces and backticks. | 1 |
+| Yay. Python syntax highlighting for all. | 1 |
+| Playing around with Python syntax highlighting and code blocks. | 1 |
+| Added API documentation, updated README documentation, and fixed some comment typos in furl.py and test/test_furl.py | 1 |
+## Committer Stats
+
+-    187	Arthur Grunseid <rleeroy@gmail.com>
+-    151	Ansgar Grunseid <grunseid@gmail.com>
+-    131	Arthur Grunseid <grunseid@gmail.com>
+-     20	Arthur Grunseid (MBAir) <grunseid@gmail.com>
+-     16	Pedro Rodrigues <medecau@gmail.com>
+-      9	gruns <gruns@users.noreply.github.com>
+-      7	Marc Abramowitz <marc@marc-abramowitz.com>
+-      5	Ansgar Grunseid <gruns@users.noreply.github.com>
+-      4	Kalle Jepsen <kson@bootes.uberspace.de>
+-      3	Ansgar Grunseid (MBAir) <grunseid@gmail.com>
+-      3	Ben Greiner <code@bnavigator.de>
+-      2	Przemysław Suliga <suligap@gmail.com>
+-      2	Tim Gates <tim.gates@iress.com>
+-      2	Tyler Kennedy <tk@tkte.ch>
+-      2	slick666 <slick666@gmail.com>
+-      1	Matt Murch <mattmurch@gmail.com>
+-      1	Wouter Bolsterlee <uws@xs4all.nl>
+-      1	Wouter Bolsterlee <wouter@intelworks.com>
+-      1	jgart <47760695+jgarte@users.noreply.github.com>
+-      1	jmcarp <jm.carp@gmail.com>
+## Branches
+
+| Branch | Number of Commits |
+| --- | --- |
+| master | 549 |
+## Top 10 Modified Files:
+
+| File | Modifications |
+| --- | --- |
+| 🐍 furl/furl.py | 187 |
+| 🐍 tests/test_furl.py | 127 |
+| 📃 README.md | 91 |
+| 📃 API.md | 82 |
+| 🐍 setup.py | 77 |
+| 🐍 furl/__init__.py | 66 |
+| 📁 changelog.txt | 61 |
+| 📁 tox.ini | 28 |
+| 📁 .travis.yml | 26 |
+| 🐍 furl/omdict1D.py | 26 |
+## Commit Frequency
+
+| Date | Number of Commits |
+| --- | --- |
+| 14-12-2011 | 15 |
+| 30-03-2017 | 14 |
+| 07-08-2016 | 10 |
+| 18-11-2011 | 9 |
+| 04-10-2013 | 9 |
+| 15-12-2014 | 9 |
+| 04-01-2016 | 7 |
+| 20-02-2017 | 7 |
+| 29-03-2017 | 7 |
+| 08-04-2021 | 7 |
+| 10-06-2013 | 6 |
+| 03-10-2013 | 6 |
+| 03-11-2013 | 6 |
+| 18-11-2014 | 6 |
+| 13-12-2014 | 6 |
+| 16-01-2015 | 6 |
+| 10-08-2016 | 6 |
+| 27-03-2017 | 6 |
+| 21-06-2018 | 6 |
+| 02-12-2011 | 5 |
+| 13-12-2011 | 5 |
+| 16-12-2011 | 5 |
+| 06-02-2012 | 5 |
+| 11-11-2013 | 5 |
+| 12-11-2013 | 5 |
+| 19-05-2016 | 5 |
+| 28-06-2016 | 5 |
+| 20-10-2016 | 5 |
+| 14-04-2017 | 5 |
+| 02-09-2017 | 5 |
+| 07-02-2012 | 4 |
+| 12-10-2012 | 4 |
+| 15-10-2013 | 4 |
+| 15-04-2014 | 4 |
+| 15-06-2014 | 4 |
+| 17-07-2014 | 4 |
+| 24-04-2015 | 4 |
+| 13-05-2015 | 4 |
+| 25-01-2016 | 4 |
+| 26-02-2016 | 4 |
+| 04-04-2016 | 4 |
+| 08-01-2018 | 4 |
+| 29-05-2018 | 4 |
+| 29-06-2018 | 4 |
+| 25-09-2018 | 4 |
+| 06-10-2018 | 4 |
+| 12-04-2021 | 4 |
+| 09-10-2013 | 3 |
+| 28-10-2013 | 3 |
+| 05-05-2014 | 3 |
+| 23-01-2015 | 3 |
+| 15-11-2016 | 3 |
+| 29-08-2017 | 3 |
+| 17-12-2017 | 3 |
+| 21-09-2018 | 3 |
+| 12-03-2021 | 3 |
+| 16-08-2021 | 3 |
+| 16-11-2011 | 2 |
+| 12-12-2011 | 2 |
+| 03-03-2012 | 2 |
+| 08-06-2013 | 2 |
+| 12-01-2014 | 2 |
+| 21-01-2014 | 2 |
+| 28-01-2014 | 2 |
+| 05-06-2014 | 2 |
+| 05-07-2014 | 2 |
+| 16-12-2014 | 2 |
+| 01-04-2015 | 2 |
+| 10-08-2015 | 2 |
+| 13-08-2015 | 2 |
+| 09-09-2015 | 2 |
+| 03-04-2016 | 2 |
+| 20-07-2016 | 2 |
+| 27-07-2016 | 2 |
+| 04-08-2016 | 2 |
+| 08-08-2016 | 2 |
+| 09-08-2016 | 2 |
+| 14-08-2016 | 2 |
+| 17-08-2016 | 2 |
+| 22-09-2016 | 2 |
+| 23-09-2016 | 2 |
+| 19-10-2016 | 2 |
+| 23-10-2016 | 2 |
+| 11-01-2017 | 2 |
+| 05-04-2017 | 2 |
+| 18-04-2017 | 2 |
+| 02-05-2017 | 2 |
+| 01-08-2017 | 2 |
+| 06-08-2017 | 2 |
+| 27-10-2017 | 2 |
+| 05-12-2017 | 2 |
+| 15-12-2017 | 2 |
+| 18-09-2019 | 2 |
+| 25-12-2019 | 2 |
+| 06-10-2020 | 2 |
+| 29-03-2021 | 2 |
+| 04-04-2021 | 2 |
+| 16-04-2021 | 2 |
+| 01-01-2022 | 2 |
+| 14-03-2022 | 2 |
+| 31-07-2022 | 2 |
+| 08-12-2011 | 1 |
+| 09-12-2011 | 1 |
+| 01-01-2012 | 1 |
+| 02-01-2012 | 1 |
+| 10-02-2012 | 1 |
+| 14-02-2012 | 1 |
+| 09-04-2012 | 1 |
+| 13-04-2012 | 1 |
+| 27-07-2012 | 1 |
+| 05-10-2013 | 1 |
+| 12-10-2013 | 1 |
+| 16-10-2013 | 1 |
+| 17-10-2013 | 1 |
+| 29-10-2013 | 1 |
+| 04-11-2013 | 1 |
+| 07-11-2013 | 1 |
+| 03-12-2013 | 1 |
+| 13-01-2014 | 1 |
+| 03-02-2014 | 1 |
+| 15-11-2014 | 1 |
+| 14-12-2014 | 1 |
+| 05-01-2015 | 1 |
+| 15-01-2015 | 1 |
+| 20-01-2015 | 1 |
+| 06-02-2015 | 1 |
+| 11-02-2015 | 1 |
+| 04-04-2015 | 1 |
+| 17-04-2015 | 1 |
+| 18-04-2015 | 1 |
+| 21-04-2015 | 1 |
+| 04-05-2015 | 1 |
+| 08-05-2015 | 1 |
+| 10-05-2015 | 1 |
+| 25-07-2015 | 1 |
+| 03-01-2016 | 1 |
+| 28-01-2016 | 1 |
+| 21-02-2016 | 1 |
+| 31-03-2016 | 1 |
+| 21-04-2016 | 1 |
+| 26-06-2016 | 1 |
+| 30-06-2016 | 1 |
+| 05-07-2016 | 1 |
+| 17-07-2016 | 1 |
+| 26-07-2016 | 1 |
+| 18-08-2016 | 1 |
+| 05-10-2016 | 1 |
+| 06-10-2016 | 1 |
+| 01-04-2017 | 1 |
+| 31-07-2017 | 1 |
+| 03-09-2017 | 1 |
+| 07-09-2017 | 1 |
+| 10-10-2017 | 1 |
+| 26-10-2017 | 1 |
+| 20-11-2017 | 1 |
+| 27-11-2017 | 1 |
+| 01-12-2017 | 1 |
+| 12-12-2017 | 1 |
+| 14-12-2017 | 1 |
+| 10-01-2018 | 1 |
+| 09-02-2018 | 1 |
+| 10-02-2018 | 1 |
+| 11-02-2018 | 1 |
+| 18-04-2018 | 1 |
+| 19-04-2018 | 1 |
+| 09-05-2018 | 1 |
+| 10-05-2018 | 1 |
+| 11-05-2018 | 1 |
+| 12-05-2018 | 1 |
+| 13-05-2018 | 1 |
+| 16-05-2018 | 1 |
+| 18-05-2018 | 1 |
+| 27-05-2018 | 1 |
+| 28-05-2018 | 1 |
+| 30-05-2018 | 1 |
+| 31-05-2018 | 1 |
+| 01-06-2018 | 1 |
+| 11-06-2018 | 1 |
+| 17-06-2018 | 1 |
+| 22-06-2018 | 1 |
+| 23-06-2018 | 1 |
+| 24-06-2018 | 1 |
+| 25-06-2018 | 1 |
+| 27-06-2018 | 1 |
+| 30-06-2018 | 1 |
+| 04-07-2018 | 1 |
+| 06-07-2018 | 1 |
+| 10-07-2018 | 1 |
+| 19-07-2018 | 1 |
+| 03-08-2018 | 1 |
+| 05-08-2018 | 1 |
+| 13-08-2018 | 1 |
+| 14-08-2018 | 1 |
+| 18-08-2018 | 1 |
+| 19-08-2018 | 1 |
+| 22-08-2018 | 1 |
+| 23-08-2018 | 1 |
+| 26-08-2018 | 1 |
+| 05-09-2018 | 1 |
+| 09-09-2018 | 1 |
+| 10-09-2018 | 1 |
+| 11-09-2018 | 1 |
+| 13-09-2018 | 1 |
+| 14-09-2018 | 1 |
+| 22-09-2018 | 1 |
+| 23-09-2018 | 1 |
+| 24-09-2018 | 1 |
+| 26-09-2018 | 1 |
+| 27-09-2018 | 1 |
+| 28-09-2018 | 1 |
+| 29-09-2018 | 1 |
+| 30-09-2018 | 1 |
+| 01-10-2018 | 1 |
+| 02-10-2018 | 1 |
+| 04-10-2018 | 1 |
+| 05-10-2018 | 1 |
+| 07-10-2018 | 1 |
+| 11-10-2018 | 1 |
+| 15-10-2018 | 1 |
+| 20-10-2018 | 1 |
+| 22-10-2018 | 1 |
+| 23-10-2018 | 1 |
+| 28-11-2018 | 1 |
+| 05-12-2018 | 1 |
+| 07-12-2018 | 1 |
+| 12-12-2018 | 1 |
+| 30-01-2019 | 1 |
+| 31-01-2019 | 1 |
+| 01-02-2019 | 1 |
+| 02-02-2019 | 1 |
+| 03-02-2019 | 1 |
+| 04-02-2019 | 1 |
+| 09-02-2019 | 1 |
+| 10-02-2019 | 1 |
+| 19-07-2019 | 1 |
+| 20-07-2019 | 1 |
+| 21-07-2019 | 1 |
+| 17-09-2019 | 1 |
+| 18-11-2019 | 1 |
+| 19-11-2019 | 1 |
+| 20-11-2019 | 1 |
+| 22-12-2019 | 1 |
+| 23-12-2019 | 1 |
+| 24-12-2019 | 1 |
+| 26-12-2019 | 1 |
+| 12-02-2020 | 1 |
+| 17-02-2020 | 1 |
+| 18-02-2020 | 1 |
+| 28-02-2020 | 1 |
+| 07-10-2020 | 1 |
+| 10-10-2020 | 1 |
+| 08-01-2021 | 1 |
+| 04-02-2021 | 1 |
+| 20-02-2021 | 1 |
+| 13-03-2021 | 1 |
+| 30-03-2021 | 1 |
+| 04-06-2021 | 1 |
+| 27-09-2021 | 1 |
+| 31-12-2021 | 1 |
+| 15-05-2022 | 1 |
+| 27-06-2022 | 1 |
+## Commit Distribution by Hour
+
+| Hour | Number of Commits |
+| --- | --- |
+| 20:00 | 46 |
+| 17:00 | 42 |
+| 23:00 | 38 |
+| 0:00 | 38 |
+| 12:00 | 35 |
+| 18:00 | 32 |
+| 14:00 | 31 |
+| 19:00 | 31 |
+| 16:00 | 28 |
+| 11:00 | 24 |
+| 15:00 | 23 |
+| 21:00 | 21 |
+| 13:00 | 20 |
+| 1:00 | 20 |
+| 10:00 | 19 |
+| 2:00 | 19 |
+| 22:00 | 17 |
+| 9:00 | 17 |
+| 8:00 | 12 |
+| 5:00 | 10 |
+| 4:00 | 10 |
+| 6:00 | 7 |
+| 3:00 | 5 |
+| 7:00 | 4 |
