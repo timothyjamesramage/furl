@@ -1,29 +1,31 @@
 # Repository Analysis
 
-**Total Files:** **22**  
+**Total Files:** **24**  
 **Total Directories:** **3**  
 
 ## File Types
 | File Type | Number of Files | Percentage Overall |
 | --- | --- | --- |
-| **.md** | 3 | 13.64% |
-| **.svg** | 4 | 18.18% |
-| **.py** | 9 | 40.91% |
-| **.in** | 1 | 4.55% |
-| **.png** | 2 | 9.09% |
-| **.ini** | 1 | 4.55% |
-| **.txt** | 1 | 4.55% |
-| **.cfg** | 1 | 4.55% |
+| **.md** | 4 | 16.67% |
+| **.txt** | 2 | 8.33% |
+| **.svg** | 4 | 16.67% |
+| **.py** | 9 | 37.50% |
+| **.in** | 1 | 4.17% |
+| **.png** | 2 | 8.33% |
+| **.ini** | 1 | 4.17% |
+| **.cfg** | 1 | 4.17% |
 
 ## Directory Structure
 ```
 +-- 📦 furl
 |   +-- 📁 📃 LICENSE.md
+|   +-- 📁 💻 requirements.txt
 |   +-- 📁 💻 api-as-text.svg
 |   +-- 📁 💻 MANIFEST.in
 |   +-- 📁 🖼️ local_imports.png
 |   +-- 📁 📃 README.md
 |   +-- 📁 🐍 setup.py
+|   +-- 📁 📃 python_documentation.md
 |   +-- 📁 💻 tox.ini
 |   +-- 📁 💻 api.svg
 |   +-- 📁 📃 git_documentation.md
@@ -59,7 +61,7 @@
 ## **Built-in Packages**
 | Package Name | Documentation URL | Used In |
 |--------------|---------------------|---------|
-| sys | [https://docs.python.org/3/library/sys.html](https://docs.python.org/3/library/sys.html) | **setup.py**, **compat.py**, **test_furl.py** |
+| sys | [https://docs.python.org/3/library/sys.html](https://docs.python.org/3/library/sys.html) | **compat.py**, **setup.py**, **test_furl.py** |
 | collections | [https://docs.python.org/3/library/collections.html](https://docs.python.org/3/library/collections.html) | **compat.py** |
 | re | [https://docs.python.org/3/library/re.html](https://docs.python.org/3/library/re.html) | **furl.py** |
 | abc | [https://docs.python.org/3/library/abc.html](https://docs.python.org/3/library/abc.html) | **furl.py**, **test_furl.py** |
@@ -75,7 +77,7 @@
 | Package Name | Install Command | Used In |
 |--------------|------------------|---------|
 | [ordereddict](https://pypi.org/project/ordereddict/) | `pip install ordereddict` | **compat.py** |
-| [six](https://pypi.org/project/six/) | `pip install six` | **test_omdict1D.py**, **furl.py**, **test_furl.py** |
+| [six](https://pypi.org/project/six/) | `pip install six` | **furl.py**, **test_omdict1D.py**, **test_furl.py** |
 | [icecream](https://pypi.org/project/icecream/) | `pip install icecream` | **furl.py** |
 | [both](https://pypi.org/project/both/) | `pip install both` | **furl.py** |
 | [the](https://pypi.org/project/the/) | `pip install the` | **furl.py** |
